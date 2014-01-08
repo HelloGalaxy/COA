@@ -1,0 +1,2 @@
+INDEX VERSION 1.126+H:\TPMGL\COA\diffusion_service\.metadata\.plugins\org.eclipse.jdt.core
+1788428263.index
