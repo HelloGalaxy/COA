@@ -1,0 +1,82 @@
+package fr.istic.cao.diffusion_service.userface;
+
+import java.awt.BorderLayout;
+import java.awt.CardLayout;
+import java.awt.Dimension;
+import java.awt.FlowLayout;
+import java.awt.TextArea;
+
+import javax.swing.BorderFactory;
+import javax.swing.ButtonGroup;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JRadioButton;
+import javax.swing.JTextArea;
+
+public class IHM extends JFrame {
+
+	JLabel labaff1; // Label des afficheurs
+	JTextArea aff1; // Valeur des afficheurs
+
+	JLabel labaff2;
+	JTextArea aff2;
+
+	JLabel labaff3;
+	JTextArea aff3;
+
+	public IHM() {
+
+		getContentPane().setLayout(new FlowLayout(FlowLayout.CENTER));
+         
+		//panel afficheur 
+		
+		// instantiation des composants
+		labaff1 = new JLabel(" Afficheur 1 : ");
+		labaff2 = new JLabel(" Afficheur 2 : ");
+		labaff3 = new JLabel(" Afficheur 3 : ");
+
+		aff1 = new JTextArea(2, 2);
+		aff2 = new JTextArea(2, 2);
+		aff3 = new JTextArea(2, 2);
+		//
+		getContentPane().add(labaff1);
+		getContentPane().add(aff1);
+		getContentPane().add(labaff2);
+		getContentPane().add(aff2);
+		getContentPane().add(labaff3);
+		getContentPane().add(aff3);
+
+		// Truc choisir algo
+
+		ButtonGroup bgAlgoGroup = new ButtonGroup();
+		JPanel algoPanel = new JPanel();
+		algoPanel.setBorder(BorderFactory.createTitledBorder("Algo"));
+
+		JRadioButton jrdbAtomiqueDiff = new JRadioButton("Atomique diffusion");
+		algoPanel.add(jrdbAtomiqueDiff);
+
+		JRadioButton jrdbSeqDiff = new JRadioButton("Sequentielle diffusion");
+		algoPanel.add(jrdbSeqDiff);
+
+		JRadioButton jrdbEpoqDiff = new JRadioButton("Epoque diffusion");
+		algoPanel.add(jrdbEpoqDiff);
+
+		bgAlgoGroup.add(jrdbEpoqDiff);
+		bgAlgoGroup.add(jrdbAtomiqueDiff);
+		bgAlgoGroup.add(jrdbSeqDiff);
+		this.add(algoPanel);
+
+		this.setPreferredSize(new Dimension(500, 500));
+		this.setResizable(false);
+		this.pack();
+		this.setVisible(true);
+		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+	}
+
+	public static void main(String args[]) {
+		new IHM();
+	}
+
+}

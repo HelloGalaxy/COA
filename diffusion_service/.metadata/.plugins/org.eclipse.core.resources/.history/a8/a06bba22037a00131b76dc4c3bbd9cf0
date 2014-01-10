@@ -1,0 +1,40 @@
+package fr.istic.cao.diffusion_service.userface;
+
+import java.awt.BorderLayout;
+import java.awt.Dimension;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextArea;
+
+public class IHM   extends JFrame {
+	
+	JLabel labaff1;  // Label des afficheurs 
+    JTextArea aff1;  // Valeur des afficheurs
+    
+
+	JLabel labaff2;
+    JTextArea aff2;
+    
+    JLabel labaff3;
+    JTextArea aff3;
+    	
+	public IHM(){
+		
+	 	  getContentPane().setLayout(new BorderLayout());
+	 	  
+	 	  
+	 	  
+	 	  
+	 	  this.setPreferredSize(new Dimension(500,500));
+	 	  this.pack();
+	 	  this.setVisible(true);
+	}
+	
+	
+	public static void main(String args[]){
+		new IHM();
+	}
+	
+
+}

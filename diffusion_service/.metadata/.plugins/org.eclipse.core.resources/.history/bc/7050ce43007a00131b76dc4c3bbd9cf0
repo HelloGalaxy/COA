@@ -1,0 +1,35 @@
+package fr.istic.coa.diffusion_service.core;
+
+public class Canal implements OberserverDeCapteur {
+
+	private Capteur capteur;
+	private OberserverDeCapteur afficheur;
+
+	public Capteur getCapteur() {
+		return capteur;
+	}
+
+	public void setCapteur(Capteur capteur) {
+		this.capteur = capteur;
+	}
+
+	public OberserverDeCapteur getAfficheur() {
+		return afficheur;
+	}
+
+	public void setAfficheur(OberserverDeCapteur afficheur) {
+		this.afficheur = afficheur;
+	}
+
+	@Override
+	public void update(Capteur subject) {
+		// TODO Auto-generated method stub
+
+	}
+	
+	public int getValue() {
+		
+		return 0;
+	}
+
+}
